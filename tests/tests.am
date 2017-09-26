@@ -96,6 +96,11 @@ check_PROGRAMS += initsecondarythread_test
 initsecondarythread_test_SOURCES = tests/initsecondarythread.c
 initsecondarythread_test_LDADD = $(test_ldadd) $(THREADDLLIBS)
 
+TESTS += thread_stress_test$(EXEEXT)
+check_PROGRAMS += thread_stress_test
+thread_stress_test_SOURCES = tests/thread_stress_test.c
+thread_stress_test_LDADD = $(test_ldadd) $(THREADDLLIBS)
+
 endif
 
 if CPLUSPLUS
